@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+<ul>
+  <%@restaurant.each do |restaurant| %>
+    <li>
+      <span class="restaurant__name">
+        <b><%= link_to restaurant.name,"/restaurants/#{restaurant.id}" %></b>
+      </span>
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Add a restaurant', '/restaurants/new' %></p>
